@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Vá Barato</string>
+    <string name="title_activity_definir_taxa">Definir Taxa</string>
+
+    <string name="regra_de_calculo">O valor vai ser calculado de acordo com a distância e tempo de translado, seguindo a seguinte regra: Taxa padrão + (Valor km x Km peccorido) + (Taxa de tempo de serviço x duração do translado) </string>
+    <string name="taxa_padrao">Taxa Padrão</string>
+    <string name="valor_por_km">Valor por KM rodado</string>
+    <string name="taxa_por_tempo">Taxa por minutos de serviço</string>
+
+    <string name="c"></string>
+    <string name="title_activity_maps">Map</string>
+</resources>
