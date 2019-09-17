@@ -5,12 +5,14 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.view.View;
 import android.widget.EditText;
+
+import static br.com.jackson.vabarrto.util.Constante.CUSTO_TAXA_PADRAO;
+import static br.com.jackson.vabarrto.util.Constante.CUSTO_TAXA_KM;
+import static br.com.jackson.vabarrto.util.Constante.CUSTO_TAXA_TEMPO;
 
 public class DefinirTaxaActivity extends AppCompatActivity {
 
@@ -44,8 +46,12 @@ public class DefinirTaxaActivity extends AppCompatActivity {
 
     public void irTelaPrincipal(View view) {
         Intent i = new Intent(DefinirTaxaActivity.this, MainActivity.class);
-        if(validar(view))
+        if(validar(view)) {
+            i.putExtra(CUSTO_TAXA_PADRAO, emDouble(edtTaxaPadrao));
+            i.putExtra(CUSTO_TAXA_KM, emDouble(edtValorKm));
+            i.putExtra(CUSTO_TAXA_TEMPO, emDouble(edtTaxaTempo));
             startActivity(i);
+        }
     }
 
     /**
@@ -72,5 +78,9 @@ public class DefinirTaxaActivity extends AppCompatActivity {
 
     private void alerta(View view, String texto) {
         Snackbar.make(view, texto, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+    }
+
+    private Double emDouble(EditText edt){
+        return Double.parseDouble(edt.getText().toString());
     }
 }
