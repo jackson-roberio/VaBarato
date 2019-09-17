@@ -9,4 +9,5 @@ public interface Constante {
     String CUSTO_TAXA_KM        = "custoTaxaKm";
 
     String CUSTO_TAXA_TEMPO     = "custoTaxaTempo";
+
 }
