@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="center"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".DefinirTaxaActivity"
     tools:showIn="@layout/activity_definir_taxa">
@@ -15,8 +16,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        android:fontFamily="serif-monospace"
         android:text="@string/regra_de_calculo"
-        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,13 +31,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
+        android:drawableRight="@drawable/ic_cifrao"
         android:ems="10"
         android:hint="@string/taxa_padrao"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        android:drawableRight="@drawable/ic_cifrao"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/edt_valor_km"
@@ -43,13 +46,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
+        android:drawableRight="@drawable/ic_cifrao"
         android:ems="10"
         android:hint="@string/valor_por_km"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/edt_taxa_padrao"
-        android:drawableRight="@drawable/ic_cifrao"/>
+        app:layout_constraintTop_toBottomOf="@+id/edt_taxa_padrao" />
 
     <EditText
         android:id="@+id/edt_taxa_tempo"
@@ -58,13 +61,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
+        android:drawableRight="@drawable/ic_cifrao"
         android:ems="10"
         android:hint="@string/taxa_por_tempo"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/edt_valor_km"
-        android:drawableRight="@drawable/ic_cifrao"/>
+        app:layout_constraintTop_toBottomOf="@+id/edt_valor_km" />
 
     <ImageView
         android:id="@+id/imageView2"

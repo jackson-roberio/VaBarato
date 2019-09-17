@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edt_origem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Insert origin address" />
+
+    <EditText
+        android:id="@+id/edt_destino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Insert destination address" />
+
+    <!--    Informações dinâmicas, distância e duração do traslado-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_dados_dinamicos"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal" >-->
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_distancia"/>
+
+        <TextView
+            android:id="@+id/txt_distancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/txt_duracao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.constraint.ConstraintLayout>
+
+<!--    </LinearLayout>-->
+
+    <!-- Valor a ser pago e botão para calcular o valor-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="true"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+        <Button
+            android:id="@+id/btn_calcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="atualizarTela"
+            android:text="@string/calcular" />
+
+        <TextView
+            android:id="@+id/txt_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/valor" />
+
+
+
+    </LinearLayout>
+
+<fragment
     android:id="@+id/map"
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MapsActivity" />
+    android:layout_height="match_parent" />
+
+</LinearLayout>

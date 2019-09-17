@@ -43,7 +43,7 @@ public class DefinirTaxaActivity extends AppCompatActivity {
 
 
     public void irTelaPrincipal(View view) {
-        Intent i = new Intent(DefinirTaxaActivity.this, MapsActivity.class);
+        Intent i = new Intent(DefinirTaxaActivity.this, MainActivity.class);
         if(validar(view))
             startActivity(i);
     }
